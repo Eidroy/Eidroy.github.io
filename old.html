@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Micro+5&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Yordie Broothaerts</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="logo.png" alt="YB Development logo" class="logo" />
+        <ul>
+          <li class="home"><a href="index.html">Home</a></li>
+          <li class="projects"><a href="#projects">Projects</a></li>
+          <li class="contact"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-container">
+      <p class="intro">Hi , my name is</p>
+      <h1 class="title">Yordie Broothaerts</h1>
+      <p class="follow-up">
+        <i class="fa-solid fa-terminal" style="color: rgb(148, 210, 230)"></i>
+        I'm a Beginning Web Developer
+      </p>
+      <techstack>
+        <i class="fa-brands fa-js fa-2xl" style="color: #ffd43b"></i>
+        <i class="fa-brands fa-css3-alt fa-2xl" style="color: #74c0fc"></i>
+        <i class="fa-brands fa-html5 fa-2xl" style="color: #f00000"></i>
+      </techstack>
+    </main>
+    <div id="projects">
+      <div class="project1">
+        <a href="https://dicegameyb.netlify.app">Dice Game</a>
+        <img src="dice.png" />
+        <p>Desktop compatible only</p>
+      </div>
+      <div class="project2">
+        <a href="https://guessmynumberyb.netlify.app">Guess The number</a
+        ><img src="number.png" />
+        <p>Desktop compatible only</p>
+      </div>
+    </div>
+    <div id="contact">
+      <h3>
+        don't hesitate to ask me any questions !
+        <i
+          class="fa-solid fa-envelope-open-text"
+          style="color: rgb(148, 210, 230)"
+        ></i>
+      </h3>
+      <form class="form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <br />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+        <br />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <br />
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <script src="email.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </body>
+</html>

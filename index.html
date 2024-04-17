@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Preahvihear&display=swap"
+      rel="stylesheet"
+    />
+    <title>Portfolio Yordie</title>
+  </head>
+  <body>
+    <nav>
+      <img src="logo.png" alt="Logo for the portfolio " />
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section id="home">
+      <div class="left">
+        <h1 class="intro">Hello! My name is <span>Yordie Broothaerts</span></h1>
+        <h2 class="title">A <span>Web</span> Developer</h2>
+        <p class="title2">Who judges a website by its <span>design</span>...</p>
+        <p class="follow-up">
+          Because if the <span>design</span> does not impress you, what else
+          can?
+        </p>
+      </div>
+      <div class="right">
+        <img class="emoji" src="emoji.png" alt="web dev at his pc" />
+      </div>
+    </section>
+    <section id="skills">
+      <h1 class="skillset">My <span>Skill</span> set</h1>
+      <img src="Group 1909.svg" alt="" class="skill" />
+    </section>
+    <section id="projects">
+      <article class="project1">
+        <a href="https://dicegameyb.netlify.app">Dice Game</a>
+        <img src="dice.png" />
+        <p>Desktop only</p>
+      </article>
+      <article class="project2">
+        <a href="https://guessmynumberyb.netlify.app">Guess The number</a
+        ><img src="number.png" />
+        <p>Desktop only</p>
+      </article>
+    </section>
+    <section id="contact">
+      <h3>
+        Feel free to ask me anything!
+        <i
+          class="fa-solid fa-envelope-open-text"
+          style="color: rgb(148, 210, 230)"
+        ></i>
+      </h3>
+      <form class="form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <br />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+        <br />
+
+        <label for="message">Message:</label>
+        <input id="message" name="message" required />
+        <br />
+
+        <button type="submit">Send</button>
+      </form>
+      <p class="mail">
+        or send me an <a href="mailto:Yordie2203@gmail.com"> E-mail</a>
+      </p>
+    </section>
+    <footer>
+      <p>Copyright &copy; 2024 Yordie Broothaerts</p>
+    </footer>
+  </body>
+  <script src="email.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+</html>
