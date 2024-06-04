@@ -10,7 +10,7 @@ body {
 }
 
 nav {
-  font-size: 1.5rem;
+  font-size: 1rem;
   background-color: #1a0b2e;
   height: 50px;
   width: 100%;
@@ -37,18 +37,25 @@ nav ul a:hover {
 #home {
   padding-top: 50px;
   display: flex;
+  flex-direction: column;
   padding-left: 16px;
   padding-right: 16px;
 }
+#home .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
 #home .emoji {
-  align-self: center;
   height: 100px;
   width: 100px;
   border-radius: 50%;
   background: radial-gradient(50% 50% at 50% 50%, #763cac 0%, rgba(50, 15, 133, 0) 100%);
 }
 #home p {
-  padding-top: 16px;
+  padding-top: 50px;
   color: white;
   text-align: center;
 }
@@ -56,21 +63,43 @@ nav ul a:hover {
   color: #7127ba;
 }
 #home h1 {
-  padding-top: 16px;
+  padding-top: 50px;
   color: white;
   text-align: center;
 }
 #home h1 span {
   color: #7127ba;
 }
-#home .skills {
+#home h2 {
   padding-top: 16px;
-  height: 100%;
-  width: 100%;
+  color: white;
+  text-align: center;
+}
+#home h2 span {
+  color: #7127ba;
+}
+
+#skills {
+  padding-top: 50px;
+}
+#skills .skillset {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#skills .skillset span {
+  color: #7127ba;
+}
+#skills .skill {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
 }
 
 #projects {
-  padding-top: 75px;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,35 +111,22 @@ nav ul a:hover {
 #projects p {
   color: #7127ba;
 }
-#projects .project1 {
+#projects .project {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-bottom: 25px;
+  padding-bottom: 50px;
 }
-#projects .project1 img {
+#projects .project img {
   text-align: center;
   height: 75px;
   width: 125px;
-}
-#projects .project2 img {
-  text-align: center;
-  height: 75px;
-  width: 125px;
-}
-#projects .project2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-bottom: 25px;
 }
 
 #contact {
-  padding-top: 150px;
+  padding-top: 50px;
   height: 468px;
   color: #7127ba;
   padding-left: 15%;
@@ -155,8 +171,8 @@ footer {
 @media screen and (min-width: 749px) and (max-width: 1023px) {
   nav {
     font-size: 2rem;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
   nav ul {
     gap: 50px;
@@ -165,9 +181,9 @@ footer {
     padding-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 50px 50px 50px 450px;
-    padding-left: 100px;
-    padding-right: 100px;
+    grid-template-rows: 1fr;
+    padding-left: 50px;
+    padding-right: 50px;
   }
   #home .emoji {
     grid-row: 1;
@@ -182,31 +198,45 @@ footer {
     text-align: left;
   }
   #home .title {
-    margin-top: 150px;
     grid-row: 1;
     grid-column: 1;
-    text-align: center;
+    text-align: left;
   }
-  #home .skillset {
-    grid-row: 4;
-    grid-column: span 2;
-    text-align: center;
+  #home .follow-up {
+    grid-row: 2;
+    grid-column: 1;
+    text-align: left;
   }
-  #home .skills {
-    padding-top: 16px;
-    height: 100%;
-    width: 100%;
-    grid-row: 5;
-    grid-column: span 2;
+  #skills {
+    padding-top: 50px;
+  }
+  #skills .skillset {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  #skills .skillset span {
+    color: #7127ba;
+  }
+  #skills .skill {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
   }
   #projects {
     padding-left: 120px;
     padding-right: 120px;
-    padding-top: 150px;
+    padding-top: 50px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+  }
+  #projects .project img {
+    height: 150px;
+    width: 300px;
   }
   #contact {
     padding-left: 25%;
@@ -226,7 +256,7 @@ footer {
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   nav {
-    font-size: 3rem;
+    font-size: 2rem;
     padding-left: 100px;
     padding-right: 100px;
     height: 100px;
@@ -235,18 +265,18 @@ footer {
     gap: 50px;
   }
   #home {
-    padding-top: 150px;
+    padding-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 50px 50px 50px 50px 600px;
+    grid-template-rows: 1fr;
     padding-left: 100px;
     padding-right: 100px;
   }
   #home .emoji {
     grid-row: 1;
     grid-column: 2;
-    height: 200px;
-    width: 200px;
+    height: 400px;
+    width: 400px;
     background: radial-gradient(50% 50% at 50% 50%, #763cac 0%, rgba(50, 15, 133, 0) 100%);
   }
   #home .intro {
@@ -259,25 +289,33 @@ footer {
     margin-top: 150px;
     grid-row: 1;
     grid-column: 1;
-    text-align: center;
+    text-align: left;
   }
   #home h2 {
     font-size: 2rem;
+    text-align: left;
   }
   #home p {
     font-size: 1.5rem;
+    text-align: left;
   }
-  #home .skillset {
-    grid-row: 5;
-    grid-column: span 2;
+  #skills {
+    padding-top: 50px;
+  }
+  #skills .skillset {
+    font-size: 2rem;
+    color: white;
     text-align: center;
+    margin-bottom: 50px;
   }
-  #home .skills {
-    padding-top: 16px;
-    height: 100%;
-    width: 100%;
-    grid-row: 6;
-    grid-column: span 2;
+  #skills .skillset span {
+    color: #7127ba;
+  }
+  #skills .skill {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
   }
   #projects {
     padding-left: 120px;
@@ -285,23 +323,16 @@ footer {
     padding-top: 150px;
     padding-bottom: 250px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }
-  #projects .project1 {
+  #projects .project {
     font-size: 2rem;
   }
-  #projects .project1 img {
-    height: 150px;
-    width: 300px;
-  }
-  #projects .project2 {
-    font-size: 2rem;
-  }
-  #projects .project2 img {
-    height: 150px;
-    width: 300px;
+  #projects .project img {
+    height: 300px;
+    width: 600px;
   }
   #contact {
     font-size: 2rem;
@@ -342,88 +373,54 @@ footer {
 }
 @media screen and (min-width: 1440px) {
   nav {
-    padding-left: 165px;
-    padding-right: 165px;
-    font-size: 1rem;
-    background-color: #1a0b2e;
+    font-size: 2rem;
+    padding-left: 150px;
+    padding-right: 150px;
     height: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-  }
-  nav img {
-    width: 35px;
-    height: 35px;
-    align-self: center;
   }
   nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    padding-right: 16px;
-    position: relative;
-  }
-  nav ul a {
-    text-decoration: none;
-    color: white;
-  }
-  nav ul a:hover {
-    color: rgb(0, 255, 255);
+    gap: 50px;
   }
   #home {
-    padding-top: 50px;
-    display: flex;
-    padding-left: 165px;
-    padding-right: 165px;
-    height: 100vh;
-    justify-content: center;
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-left: 150px;
+    padding-right: 150px;
   }
   #home .emoji {
-    align-self: flex-end;
-    margin-top: 100px;
-    height: 600px;
-    width: 600px;
-    border-radius: 50%;
+    grid-row: 1;
+    grid-column: 2;
+    height: 400px;
+    width: 400px;
     background: radial-gradient(50% 50% at 50% 50%, #763cac 0%, rgba(50, 15, 133, 0) 100%);
   }
   #home .intro {
-    width: 800px;
-    margin-top: 165px;
-    text-align: start;
+    font-size: 2rem;
+    grid-row: 1;
+    grid-column: 1;
+    text-align: left;
   }
-  #home .title2 {
-    width: 800px;
-    text-align: start;
-  }
-  #home p {
-    width: 800px;
-    padding-top: 16px;
-    color: white;
-    font-size: 1rem;
-    text-align: start;
-  }
-  #home p span {
-    color: #7127ba;
+  #home .title {
+    margin-top: 150px;
+    grid-row: 1;
+    grid-column: 1;
+    text-align: left;
   }
   #home h2 {
-    width: 800px;
-    padding-top: 16px;
-    color: white;
     font-size: 2rem;
+    text-align: left;
   }
-  #home h2 span {
-    color: #7127ba;
-  }
-  #home h1 {
-    font-size: 3rem;
+  #home p {
+    font-size: 1.5rem;
+    text-align: left;
   }
   #skills {
     padding-top: 50px;
   }
   #skills .skillset {
-    font-size: 3rem;
+    font-size: 2rem;
     color: white;
     text-align: center;
     margin-bottom: 50px;
@@ -438,76 +435,47 @@ footer {
     width: 85%;
   }
   #projects {
-    padding-left: 165px;
-    padding-right: 165px;
-    margin-top: 165px;
-    padding-bottom: 350px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 150px;
+    padding-bottom: 250px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
   }
-  #projects .project1 {
-    font-size: 1rem;
+  #projects .project {
+    font-size: 2rem;
   }
-  #projects .project1 img {
-    height: 250px;
-    width: 450px;
-  }
-  #projects .project2 {
-    font-size: 1rem;
-  }
-  #projects .project2 img {
-    height: 250px;
-    width: 450px;
+  #projects .project img {
+    height: 300px;
+    width: 600px;
   }
   #contact {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 1rem;
-    padding-left: 165px;
-    padding-right: 165px;
-    height: 100vh;
+    font-size: 2rem;
+    padding-left: 25%;
+    padding-right: 25%;
+    margin-bottom: 300px;
   }
-  #contact h3 {
-    width: 25%;
-  }
-  #contact form {
-    width: 25%;
-    padding: 0;
-    width: 25%;
-    color: white;
+  #contact form input {
+    height: 50px;
   }
   #contact form button {
     align-self: center;
     width: 150px;
     height: 50px;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: bolder;
     border-radius: 15px;
     text-align: center;
-    color: white;
     background-color: #7127ba;
     border: white solid 1px;
-  }
-  h3 {
-    color: white;
-  }
-  .mail {
-    width: 25%;
-    color: white;
-    font-size: 1rem;
-  }
-  .mail a {
-    text-decoration: none;
-    color: #7127ba;
   }
   footer {
     color: white;
     text-align: center;
     font-size: 2rem;
-    padding: 5px;
+    padding: 50px;
     border: 5px white Solid;
   }
 }
